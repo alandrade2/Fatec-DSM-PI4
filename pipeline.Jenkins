@@ -1,1 +1,12 @@
+node {
+    stage("Commit inicial") {
+        echo 'Verifica se houve novo commit na branch"
+    }
+    stage("Teste") {
+        echo 'Executa os teste"
+    }
+    stage("Build") {
+        echo 'Builda a aplicação e troca a branch para release"
+    }
+}
 
