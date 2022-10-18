@@ -1,12 +1,20 @@
-node {
-    stage("Commit inicial") {
-        echo 'Verifica se houve novo commit na branch"
-    }
-    stage("Teste") {
-        echo 'Executa os teste"
-    }
-    stage("Build") {
-        echo 'Builda a aplicação e troca a branch para release"
+pipeline {
+    agent any
+    stages {
+        stage("Commit inicial") {
+            steps {
+                echo 'Verifica se houve novo commit na branch"
+            }
+        }
+        stage("Teste") {
+            steps {
+                echo 'Executa os teste"
+            }
+        }
+        stage("Build") {
+            steps {
+                echo 'Builda a aplicação e troca a branch para release"
+            }
+        }
     }
 }
-
